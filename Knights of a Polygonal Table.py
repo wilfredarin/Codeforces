@@ -1,3 +1,5 @@
+#	http://codeforces.com/contest/994/problem/B
+
 n,k = map(int,input().split())
 power = list(map(int,input().split()))
 coins = list(map(int,input().split()))

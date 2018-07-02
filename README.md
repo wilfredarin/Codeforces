@@ -1,2 +1,2 @@
 # Codeforces
-Important list of Problems and their solutions from codeforces in python3
+Important list of Problems and their Solutions from Codeforces in python3

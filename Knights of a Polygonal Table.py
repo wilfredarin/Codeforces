@@ -3,9 +3,9 @@
 n,k = map(int,input().split())
 power = list(map(int,input().split()))
 coins = list(map(int,input().split()))
-ans = [0 in range(n)]
+ans = [0 for i in range(n)]
 coins_on_sale = []
-power_index = [[p[i],i] for i in range(n)]
+power_index = [[power[i],i] for i in range(n)]
 power_index.sort()
 
 
@@ -24,12 +24,23 @@ for i in range(n):
 	coins_on_sale.sort()
 
 	if len(coins_on_sale) > k :
-		z = z[1:]
+		coins_on_sale = coins_on_sale[1:]
 		#keeps removing Smallestcoin if it exceeds the limit
 
 
 for i in ans :
 	print(i,end = " ")		
+
+
+
+
+
+	
+
+
+
+
+
 
 
 

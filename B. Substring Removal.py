@@ -1,29 +1,23 @@
-n,k =map(int,input().split())
-def block(x): 
-      
-    v = [] 
-    a=[]
-   
-    print ("Blocks for %d : " %x, end="") 
-    while (x > 0): 
-        v.append(int(x % 2)) 
-        x = int(x / 2) 
-  
-    
-    for i in range(0, len(v)): 
-        if (v[i] == 1): 
-            a.append(i) 
-    return (a)       
+n=int(input())
+s=input()
+first=s[0]
+last = s[n-1]
 
+count_first =1
+count_last  =1
 
-t=block(n)
-print(t)
-if len(t)>k or k>n:
-	print("NO")
-	exit()
-l=[]
-for i in t:
-	l.append([j for j in range(i+1)])
-print(l)
-for i in l:
-	
+for char in s:
+	if char==first:
+		count_first+=1
+	else:
+		break
+for char in s:
+	if char == last:
+		count_last+=1
+	else:
+		break
+
+if first == last:
+	print(count_last*count_first % 998244353)
+else:
+	print((count_last+count_first-1) % 998244353)

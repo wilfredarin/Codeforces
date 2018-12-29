@@ -29,7 +29,7 @@ for char in s:
 	#last charachter(aacd,eee | aacde,ee | aacdee,e | aacdeee, | )
 	#we have considered removing all character WAY twice 
 	#so lets subtract one!!!!
-for char in s:
+for char in s[::-1]:
 	if char == last:
 		count_last+=1
 	else:
@@ -38,6 +38,6 @@ for char in s:
 		
 	
 if first == last:
-	print(count_last*count_first % 998244353)
+	print((count_last*count_first) % 998244353)
 else:
 	print((count_last+count_first-1) % 998244353)
